@@ -15,6 +15,7 @@ def solution(array):
     
     
     for i, value in index:
+        
         if count == value:     # if 2 == value:
             list.append(i)    # list = ["1", "2"]
             
