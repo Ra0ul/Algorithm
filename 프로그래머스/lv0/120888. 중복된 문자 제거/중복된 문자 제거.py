@@ -6,11 +6,8 @@ def solution(my_string):
     없으면 answer에 더해주기!
     """
     count = 0
-    # print(my_string[count+1:])
     for i in my_string:
         if i not in answer:
             answer += i
-        else:
-            pass
         count += 1
     return answer
