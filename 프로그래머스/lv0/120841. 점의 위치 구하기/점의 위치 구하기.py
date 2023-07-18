@@ -6,16 +6,7 @@ def solution(dot):
     음음 = 3
     양음 = 4
     """
-    
-    if dot[0] > 0:
-        if dot[1] > 0:
-            answer =1
-        else:
-            answer =4
-    else:
-        if dot[1] > 0:
-            answer =2
-        else:
-            answer =3 
-            
+    quad = [(1,4),(2,3)]
+    answer = quad[dot[0]<0][dot[1]<0]
+ 
     return answer
