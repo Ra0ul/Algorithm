@@ -1,10 +1,8 @@
 def solution(num, k):
     answer = 0
-    num, k = str(num), str(k)
-    
-    if k in num:
-        answer = num.index(k)+1
-    else:
-        answer =-1
+    for i in enumerate(str(num)):
+        if i[1] == str(k):
+            return i[0]+1
+    return -1
         
-    return answer
+    
