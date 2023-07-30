@@ -1,27 +1,18 @@
 def solution(keyinput, board):
     limit = [board[0]//2,board[1]//2]
     answer = []
-    x_pos = []
-    y_pos = []
+    x,y = 0, 0
     
     for i in keyinput:
         if i == "up":
-            y_pos.append(1)
-            if abs(sum(y_pos)) > limit[1]:
-                y_pos.remove(1)
+            y = min(y+1, limit[1])
         if i == "down":
-            y_pos.append(-1)
-            
-            if abs(sum(y_pos)) > limit[1]:
-                y_pos.remove(-1)
+            y = max(y-1, -limit[1])
         if i == "right":
-            x_pos.append(1)
-            if abs(sum(x_pos)) > limit[0]:
-                x_pos.remove(1)
+            x = min(x+1, limit[0])
         if i == "left":
-            x_pos.append(-1)
-            if abs(sum(x_pos)) > limit[0]:
-                x_pos.remove(-1)           
-    answer = [sum(x_pos), sum(y_pos)]
+            x = max(x-1, -limit[0])      
+        
+    answer = [x, y]
     
     return answer
