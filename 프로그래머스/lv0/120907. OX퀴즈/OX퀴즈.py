@@ -1,18 +1,23 @@
 def solution(quiz):
     answer = []
-    for mathes in quiz:
-        math_list = mathes.split()
-        if math_list[1] == "-":
-            left = int(math_list[0]) - int(math_list[2])
+    
+    for i in quiz:
+        i_slice = i.split()
+        
+        if i_slice[1] == '+':
+            left = int(i_slice[0]) + int(i_slice[2])
+            right= int(i_slice[4])
+            print(left, right)
+
         else:
-            left = int(math_list[0]) + int(math_list[2])
-            
-        right = int(math_list[4])
+            left = int(i_slice[0]) - int(i_slice[2])
+            right = int(i_slice[4])
         
         if left == right:
-            answer.append("O")
-        else :
-            answer.append("X")
+            answer.append('O')
+        else:
+            answer.append('X')
     
+    return answer    
     
-    return answer
+  
