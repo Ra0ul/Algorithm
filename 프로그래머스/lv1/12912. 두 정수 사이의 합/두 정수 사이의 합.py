@@ -3,6 +3,8 @@ def solution(a, b):
     if a == b:
         return a
     else:
-        for i in range(min(a,b),max(a,b)+1):
+        start = min(a,b)
+        end = max(a,b)
+        for i in range(start, end+1):
             answer += i
     return answer
