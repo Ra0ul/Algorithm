@@ -1,8 +1,11 @@
-# def bill(num, m, score):  #0,1,2,3 ...,m
-#     tray =[]
-#     for i in range(num, num+m):
-#         tray.append(score[i])
-#     return min(tray)
+"""
+
+def bill(num, m, score):  #0,1,2,3 ...,m
+    for i in range(0,num,m):
+        price += min(score[i:i+m])*m
+    return price
+    
+"""
 
 def solution(k, m, score):
     answer = 0
@@ -15,6 +18,7 @@ def solution(k, m, score):
     # print("원본 : ", score)
     # 과일 수가 딱 떨어지면
     if len(score)%m == 0:
+        # print(bill(len(score), m, score))
         for i in range(0,len(score),m):
             price += min(score[i:i+m])*m
         return price
