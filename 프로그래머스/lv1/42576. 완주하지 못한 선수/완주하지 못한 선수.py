@@ -1,6 +1,6 @@
 #효율성 테스트 시간 초과ㅠㅠ
-"""
 
+"""
 def solution(participant, completion):
     answer = ''
     for i in completion:
@@ -17,3 +17,5 @@ def solution(participant, completion):
             print(i)
             return participant[i_num]
     return participant[len(participant)-1]
+    
+   
