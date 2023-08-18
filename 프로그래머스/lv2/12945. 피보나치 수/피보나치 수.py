@@ -10,8 +10,6 @@ def solution(n):
 	for i in range(n+1):
 		if i >= 2:
 			answer.append(answer[i-2] + answer[i-1])
-		else:
-			pass
 
     # 나머지를 구하라 %1234567
 	return answer[n]%1234567
