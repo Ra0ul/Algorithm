@@ -22,4 +22,5 @@ for i, j in word_doc.items():
     elif j == max_num and len(max_list) > 0:
         max_list.pop()
         max_list.append("?")
+        break
 print(*max_list)
