@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT 
+    NAME,
+    count(NAME) COUNT
+FROM ANIMAL_INS
+GROUP BY NAME	
+HAVING COUNT(NAME) > 1 and NAME is not null
+ORDER BY NAME
