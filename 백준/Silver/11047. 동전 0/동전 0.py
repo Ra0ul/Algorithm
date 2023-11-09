@@ -9,9 +9,12 @@ for i in range(n):
     if b <= k:
         num.append(b)
 
-while num and k >= 0:
-    number = num.pop()
-    answer += k // number
-    k = k % number
+while num:
+    if k >= 0:
+        number = num.pop()
+        answer += k // number
+        k = k % number
+    else:
+        break
 
 print(answer)
