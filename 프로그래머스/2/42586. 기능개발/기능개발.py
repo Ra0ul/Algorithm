@@ -1,4 +1,15 @@
+"""
+progresses : 진도가 적힌 정수 배열
+speeds : 작업 개발 속도
+return : 각 배포마다 몇개의 기능이 배포되는지
 
+배포는 하루에 한번만
+
+1. 일단 남은 작업량을 계산
+2. 일 진행하는 속도에 따라 
+3. 배포할 수 있는 날짜 정리하기
+
+"""
 from collections import deque
 
 def solution(progresses, speeds):
